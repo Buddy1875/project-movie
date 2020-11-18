@@ -19,7 +19,7 @@ import { DisplayMovieComponent } from "./display-movie/display-movie.component";
     BrowserModule,
     RouterModule.forRoot([
       { path: "movie", component: MovieComponent },
-      { path: "command", component: CommandComponent }
+      { path: "command/:id", component: CommandComponent }
     ]),
     FormsModule,
     ReactiveFormsModule,
