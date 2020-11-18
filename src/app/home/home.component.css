@@ -57,11 +57,11 @@ section {
 
 .body {
   display: flex;
-  /* border: 2px solid rgb(255, 54, 47); */
+  flex-direction: column;
+  border: 2px solid rgb(255, 54, 47);
   padding: 0;
   background: white;
-  height: 100%;
-  width: 100%;
+
   font-family: "Comic Sans MS", cursive, sans-serif;
 
   /* border: 2px solid black; */
