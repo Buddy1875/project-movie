@@ -12,6 +12,7 @@ import { MovieComponent } from "./movie/movie.component";
 import { CommandComponent } from "./command/command.component";
 import { DisplayCommentComponent } from "./display-comment/display-comment.component";
 
+import { FirebaseService } from "./firebase.service";
 @NgModule({
   imports: [
     BrowserModule,
