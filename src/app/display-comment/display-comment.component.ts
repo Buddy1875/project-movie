@@ -76,7 +76,7 @@ export class DisplayCommentComponent implements OnInit {
     swal
       .fire({
         title: "Delete !",
-        html: "Comfire to Dalate",
+        html: "Comfirm to Delete",
         icon: "warning",
         showConfirmButton: true,
         showCancelButton: true
