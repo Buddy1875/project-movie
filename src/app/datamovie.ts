@@ -10,3 +10,10 @@ export class DetailsMovie {
   youtube: string;
   image: string;
 }
+
+export class SelectM {
+  Details: string;
+  name: string;
+  youtube: string;
+  image: string;
+}
