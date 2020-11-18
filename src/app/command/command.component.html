@@ -1,7 +1,7 @@
 <div class="body-command">
-  <div class="detail-movie">
-    <div class="img-movie">
-      <img
+	<div class="detail-movie">
+		<div class="img-movie">
+			<img
         src="https://www.iizziistudio.com/wp-content/uploads/2013/10/bg-wall-black_glog.jpg"
         class="img"
         alt="Girl in a jacket"
@@ -9,28 +9,28 @@
         height="450"
       />
     </div>
-    <div class="detail">
-      <h1>Details</h1>
-      <p>
-        for searching you can read about filters in a view. updating view is
-        nothing like setting ng-model since angular is two-way data binding. To
-        update on server side, use PUT, to add new POST. – changtung Jul 15 '15
-        atfor searching you can read about filters in a view. updating view is
-        nothing like setting ng-model since angular is two-way data binding. To
-        update on server side, use PUT, to add new POST. – changtung Jul 15 '15
-        at
-      </p>
-    </div>
-  </div>
-  <hr />
-  <div class="comment-body">
-    <span>Comment</span>
+			<div class="detail">
+				<h1>Details</h1>
+				<p>
+					for searching you can read about filters in a view. updating view is
+					nothing like setting ng-model since angular is two-way data binding. To
+					update on server side, use PUT, to add new POST. – changtung Jul 15 '15
+					atfor searching you can read about filters in a view. updating view is
+					nothing like setting ng-model since angular is two-way data binding. To
+					update on server side, use PUT, to add new POST. – changtung Jul 15 '15
+					at
+				</p>
+			</div>
+		</div>
+		<hr />
+		<div class="comment-body">
+			<span>Comment</span>
 
-    <app-display-comment></app-display-comment>
+			<app-display-comment [movie]="movie"></app-display-comment>
 
-    <div class="comment-input">
-      <input type="text" />
-      <input type="button" class="btn-comment" value="Comment" />
+			<div class="comment-input">
+				<input type="text" />
+				<input type="button" class="btn-comment" value="Comment" />
     </div>
-  </div>
-</div>
+			</div>
+		</div>

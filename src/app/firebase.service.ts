@@ -8,7 +8,7 @@ import { Datamovie } from "./datamovie";
 export class FirebaseService {
   constructor(private firestore: AngularFirestore) {}
 
-  getTweet() {
+  getComment() {
     let DocRef = this.firestore.collection<Datamovie>("review", e =>
       e.orderBy("date", "desc")
     );
