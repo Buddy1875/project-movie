@@ -3,9 +3,9 @@ import { FirebaseService } from "../firebase.service";
 import { Datamovie } from "../datamovie";
 
 @Component({
-  selector: "app-time-line",
-  templateUrl: "./time-line.component.html",
-  styleUrls: ["./time-line.component.css"]
+  selector: "app-command",
+  templateUrl: "./command.component.html",
+  styleUrls: ["./command.component.css"]
 })
 export class TimeLineComponent implements OnInit {
   movie: Datamovie[];

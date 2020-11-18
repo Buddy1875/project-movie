@@ -15,26 +15,26 @@ export class FirebaseService {
     return DocRef.valueChanges();
   }
 
-  addTweet(name: string, messege: string) {
-    let tweet = {
-      name: name,
-      msg: messege,
-      date: firebase.default.firestore.Timestamp.now()
-    };
-    const ref = this.firestore.collection("review").add(tweet);
-    ref.then(newRef => {
-      const upDateID = {
-        id: newRef.id
-      };
-      newRef.update(upDateID);
-    });
-    return ref;
-  }
-  //delete
-  deleteTweet(id: string) {
-    return this.firestore
-      .collection("review")
-      .doc(id)
-      .delete();
-  }
+  // addTweet(name: string, messege: string) {
+  //   let tweet = {
+  //     name: name,
+  //     msg: messege,
+  //     date: firebase.default.firestore.Timestamp.now()
+  //   };
+  //   const ref = this.firestore.collection("review").add(tweet);
+  //   ref.then(newRef => {
+  //     const upDateID = {
+  //       id: newRef.id
+  //     };
+  //     newRef.update(upDateID);
+  //   });
+  //   return ref;
+  // }
+  // //delete
+  // deleteTweet(id: string) {
+  //   return this.firestore
+  //     .collection("review")
+  //     .doc(id)
+  //     .delete();
+  // }
 }
