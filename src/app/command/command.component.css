@@ -1,7 +1,7 @@
 .body-command {
   margin: 2rem auto;
   padding: 20px;
-  border: 2px solid black;
+  /* border: 2px solid black; */
 }
 
 .detail-movie {
@@ -17,7 +17,38 @@
   padding: 50px;
 }
 
-
-.comment-body{
+.comment-body {
   padding: 50px;
+}
+.comment-list {
+  margin: 15px;
+  padding: 10px;
+  border-left: 2px solid rgb(255, 0, 0);
+  background: rgba(97, 97, 97, 0.116);
+}
+
+.comment-input{
+  padding: 10px;
+}
+
+.btn-comment{
+  margin: 0px 10px;
+  padding: 10px 20px;
+  border: 2px solid greenyellow;
+  background: none;
+}
+.btn-comment:hover{
+  background: greenyellow;
+  color: white;
+}
+
+input[type=text] {
+  padding: 10px 20px;
+  width: 130px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+  width: 75%;
 }
