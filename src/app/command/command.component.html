@@ -25,8 +25,9 @@
 		<hr />
 		<div class="comment-body">
 			<span>Comment</span>
-
-			<app-display-comment [movie]="movie"></app-display-comment>
+			<div class="debug" *ngFor="let movie of movie">
+				<app-display-comment [movie]="movie"></app-display-comment>
+			</div>
 
 			<div class="comment-input">
 				<input type="text" />
