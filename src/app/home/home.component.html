@@ -1,7 +1,8 @@
 <nav>
   <span>Reviwe</span>
   <div class="nav-head">
-    <a href="/">Home</a> | <a href="/">Reviwe</a> | <a href="/">Home</a> |
+    <a routerLink="movie">Home</a> | <a routerLink="comment">Reviwe</a> |
+    <a href="/">Home</a> |
     <input type="text" />
     <input type="button" class="btn-success" value="Submit" />
   </div>
@@ -18,7 +19,6 @@
   </p>
 </div>
 <div class="body">
-  <app-movie></app-movie>
-  <app-command></app-command>
+  <router-outlet></router-outlet>
 </div>
 <!-- </section> -->

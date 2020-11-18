@@ -58,7 +58,8 @@ section {
 .body {
   display: flex;
   flex-direction: column;
-  border: 2px solid rgb(255, 54, 47);
+  /* border
+  : 2px solid rgb(255, 54, 47); */
   padding: 0;
   background: white;
 
