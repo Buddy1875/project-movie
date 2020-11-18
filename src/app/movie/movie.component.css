@@ -1,0 +1,23 @@
+.img {
+  border: 2px solid black;
+}
+
+.span-top {
+  font-size: 50px;
+  font-weight: bold;
+  /* border: 2px solid black; */
+  padding: 20px;
+}
+
+.body-movie {
+  padding: 10px;
+  display: flex;
+  margin: 20px;
+  width: 1000px;
+  /* border: 2px solid black; */
+  box-shadow: 1px 1px 5px;
+}
+
+.body-movie p {
+  padding: 20px;
+}
