@@ -24,7 +24,8 @@ nav div a:hover {
 
 section {
   margin-top: 6rem;
-  /* border: 2px solid black; */
+  border: 2px solid black;
+  height: 1000px;
 }
 .btn-success {
   margin: 0 10px;
@@ -40,7 +41,8 @@ section {
 }
 
 .header-body {
-  margin: 10px auto;
+  margin: auto;
+  margin-top: 6rem;
   width: 650px;
   height: 250px;
   padding: 20px;
