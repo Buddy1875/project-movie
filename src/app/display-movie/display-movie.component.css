@@ -1,0 +1,35 @@
+
+.movie1 {
+  padding: 10px;
+  display: flex;
+  margin: 20px;
+  /* border: 2px solid black; */
+  /* box-shadow: 1px 1px 2px; */
+}
+.movie1 p{
+  padding: 20px;
+}
+.movie1:hover {
+  /* border: 2px solid black; */
+  box-shadow: 1px 1px 2px;
+}
+
+.movie2 {
+  padding: 10px;
+  display: flex;
+  margin: 20px 33%;
+  width: 1000px;
+  /* border: 2px solid black; */
+  /* box-shadow: 1px 1px 2px; */
+}
+.btn-details {
+  padding: 10px;
+  border: 2px solid black;
+  margin-left: 85%;
+  border-radius: 5px;
+}
+
+.btn-details:hover {
+  color: white;
+  background: rgba(0, 0, 0, 0.658);
+}

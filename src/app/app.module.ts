@@ -13,6 +13,7 @@ import { CommandComponent } from "./command/command.component";
 import { DisplayCommentComponent } from "./display-comment/display-comment.component";
 
 import { FirebaseService } from "./firebase.service";
+import { DisplayMovieComponent } from './display-movie/display-movie.component';
 @NgModule({
   imports: [
     BrowserModule,
@@ -30,7 +31,8 @@ import { FirebaseService } from "./firebase.service";
     HomeComponent,
     MovieComponent,
     CommandComponent,
-    DisplayCommentComponent
+    DisplayCommentComponent,
+    DisplayMovieComponent
   ],
   bootstrap: [AppComponent],
   providers: [FirebaseService]

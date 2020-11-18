@@ -15,6 +15,13 @@ export class FirebaseService {
     return DocRef.valueChanges();
   }
 
+  getMovie() {
+    let DocRef = this.firestore.collection<Datamovie>("review", e =>
+      e.orderBy("date", "desc")
+    );
+    return DocRef.valueChanges();
+  }
+
   // addTweet(name: string, messege: string) {
   //   let tweet = {
   //     name: name,
