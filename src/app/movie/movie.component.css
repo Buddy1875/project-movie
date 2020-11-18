@@ -1,7 +1,3 @@
-.img {
-  border: 2px solid black;
-}
-
 .span-top {
   font-size: 50px;
   font-weight: bold;
@@ -15,15 +11,29 @@
   margin: 20px;
   width: 1000px;
   /* border: 2px solid black; */
+  /* box-shadow: 1px 1px 2px; */
+}
+.movie1:hover {
+  /* border: 2px solid black; */
   box-shadow: 1px 1px 2px;
 }
+
 .movie2 {
   padding: 10px;
   display: flex;
-  margin: 20px 80%;
+  margin: 20px 33%;
   width: 1000px;
   /* border: 2px solid black; */
+  /* box-shadow: 1px 1px 2px; */
+}
+.movie2:hover {
+  /* border: 2px solid black; */
   box-shadow: 1px 1px 2px;
+}
+.body-movie {
+  width: 1600px;
+  /* border: 2px solid black; */
+  margin: 20px 10%;
 }
 
 .body-movie p {

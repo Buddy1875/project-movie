@@ -24,6 +24,7 @@ nav div a:hover {
 
 section {
   margin-top: 6rem;
+  /* border: 2px solid black; */
 }
 .btn-success {
   margin: 0 10px;
@@ -55,11 +56,13 @@ section {
 .body {
   display: flex;
   /* border: 2px solid rgb(255, 54, 47); */
-  padding: 20px;
+  padding: 0;
   background: white;
-  height: 1000px;
+  height: 100%;
   width: 100%;
   font-family: "Comic Sans MS", cursive, sans-serif;
+
+  /* border: 2px solid black; */
 }
 .caon-nav {
   display: flex;
