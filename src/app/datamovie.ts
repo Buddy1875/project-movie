@@ -8,4 +8,5 @@ export class DetailsMovie {
   Details: string;
   name: string;
   youtube: string;
+  image: string;
 }

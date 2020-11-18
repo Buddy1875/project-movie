@@ -1,8 +1,9 @@
 <div class="movie1">
-	<img src="{{ moviedetail.youtube }}" class="img" alt="Girl in a jacket" width="250" height="250">
-	<div>
-		<p>
-			{{ moviedetail.name }}
+	<img src="{{ moviedetail.image }}" class="img" alt="Girl in a jacket" width="250" height="250">
+
+	<div style="">
+		<span class="name">NameMovie | {{ moviedetail.name }}</span>
+		<p class="detailscomment">
 			{{ moviedetail.Details }}
 		</p>
 		<a class="btn-details">Details</a>
