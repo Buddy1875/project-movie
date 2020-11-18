@@ -7,7 +7,7 @@ import { Datamovie } from "../datamovie";
   templateUrl: "./command.component.html",
   styleUrls: ["./command.component.css"]
 })
-export class TimeLineComponent implements OnInit {
+export class CommandComponent implements OnInit {
   movie: Datamovie[];
 
   constructor(private firebaseService: FirebaseService) {}
