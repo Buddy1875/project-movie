@@ -32,6 +32,7 @@ import { FirebaseService } from "./firebase.service";
     CommandComponent,
     DisplayCommentComponent
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  providers: [FirebaseService]
 })
 export class AppModule {}
