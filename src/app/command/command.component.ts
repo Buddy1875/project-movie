@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { FirebaseService } from "../firebase.service";
 import { Datamovie, SelectM } from "../datamovie";
+import { ActivatedRoute } from "@angular/router";
 
 @Component({
   selector: "app-command",
@@ -9,16 +10,26 @@ import { Datamovie, SelectM } from "../datamovie";
 })
 export class CommandComponent implements OnInit {
   movie: Datamovie[];
-  select: SelectM[];
+  selectmovie: SelectM[];
 
-  constructor(private firebaseService: FirebaseService) {}
+  constructor(
+    private firebaseService: FirebaseService,
+    private activateRoute: ActivatedRoute
+  ) {}
 
   ngOnInit() {
     this.firebaseService
       .getComment()
-      .subscribe(val => (console.log(val), (this.movie = val)));
-    this.firebaseService
-      .SelectMovie("Avengers Endgame")
-      .subscribe(val => (console.log(val), (this.select = val)));
+      .subscribe(val => (console.log(val), (this.movie = val))
+    );
+
+    // เพิ่ม detail
+    this.activateRoute.params.subscribe(routeParam => {
+      //console.log(routeParam.id)
+      this.firebaseService.SelectMovie("AvengersEndgame").subscribe(tw => {
+        //console.log(tw)
+        this.selectmovie = tw
+      })
+    })
   }
 }

@@ -1,8 +1,8 @@
 <div class="body-command">
-	<div class="detail-movie">
+	<div class="detail-movie" *ngFor="let selectmovie of selectmovie">
 		<div class="img-movie">
 			<img
-        src="https://www.iizziistudio.com/wp-content/uploads/2013/10/bg-wall-black_glog.jpg"
+        src="{{ selectmovie.image }}"
         class="img"
         alt="Girl in a jacket"
         width="450"
@@ -10,9 +10,9 @@
       />
     </div>
 			<div class="detail">
-				<h1>Details</h1>
+				<h1>{{ selectmovie.name }}</h1>
 				<p>
-					{{ select }}
+					{{ selectmovie.Details }}
 
 				</p>
 			</div>
