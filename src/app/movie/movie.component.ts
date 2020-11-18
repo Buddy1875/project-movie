@@ -8,11 +8,11 @@ import { Datamovie, DetailsMovie } from "../datamovie";
   styleUrls: ["./movie.component.css"]
 })
 export class MovieComponent implements OnInit {
-  detailsmovie: DetailsMovie[];
+  moviedetail: DetailsMovie[];
 
   constructor(private firebaseService: FirebaseService) {}
 
   ngOnInit() {
-    this.firebaseService.getMovie().subscribe(val => (this.detailsmovie = val));
+    this.firebaseService.getMovie().subscribe(val => (this.moviedetail = val));
   }
 }
