@@ -1,4 +1,6 @@
 import { Component, OnInit } from "@angular/core";
+import { FirebaseService } from "../firebase.service";
+import { DetailsMovie } from "../datamovie";
 
 @Component({
   selector: "app-movie",
@@ -6,7 +8,13 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./movie.component.css"]
 })
 export class MovieComponent implements OnInit {
-  constructor() {}
+  detailsmovie: DetailsMovie[];
 
-  ngOnInit() {}
+  constructor(private firebaseService: FirebaseService) {}
+
+  ngOnInit() {
+    this.firebaseService
+      .getComment()
+      .subscribe(val => (this.detailsmovie = val));
+  }
 }

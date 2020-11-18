@@ -3,3 +3,9 @@ export class Datamovie {
   moviename: string;
   msg: string;
 }
+
+export class DetailsMovie {
+  Details: string;
+  name: string;
+  youtube: string;
+}

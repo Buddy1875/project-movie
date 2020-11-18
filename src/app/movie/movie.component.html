@@ -1,4 +1,6 @@
 <div class="body-movie">
 	<span class="span-top"> Top Movie</span>
-	<app-display-movie></app-display-movie>
+	<div *ngFor="let detailsmovie of detailsmovie">
+		<app-display-movie [detailsmovie]="detailsmovie"></app-display-movie>
+	</div>
 </div>

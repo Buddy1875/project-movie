@@ -2,7 +2,7 @@ import { Injectable } from "@angular/core";
 
 import { AngularFirestore } from "@angular/fire/firestore";
 import * as firebase from "firebase/app";
-import { Datamovie } from "./datamovie";
+import { Datamovie, DetailsMovie } from "./datamovie";
 
 @Injectable({ providedIn: "root" })
 export class FirebaseService {
@@ -16,8 +16,8 @@ export class FirebaseService {
   }
 
   getMovie() {
-    let DocRef = this.firestore.collection<Datamovie>("review", e =>
-      e.orderBy("date", "desc")
+    let DocRef = this.firestore.collection<DetailsMovie>("movie", e =>
+      e.orderBy("name", "desc")
     );
     return DocRef.valueChanges();
   }
