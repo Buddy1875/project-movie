@@ -1,4 +1,21 @@
 /* Add application styles & imports to this file! */
+/* width */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border: none;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(127, 255, 77);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(45, 250, 45);
+}
 
 body {
   margin: 0;
