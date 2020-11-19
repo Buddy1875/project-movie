@@ -4,6 +4,8 @@ import { Datamovie, SelectM } from "../datamovie";
 import { ActivatedRoute } from "@angular/router";
 import { FormControl, FormGroup } from "@angular/forms";
 
+import swal from "sweetalert2";
+
 @Component({
   selector: "app-command",
   templateUrl: "./command.component.html",
@@ -16,8 +18,6 @@ export class CommandComponent implements OnInit {
   form = new FormGroup({
     msg: new FormControl("")
   });
-
-  
 
   constructor(
     private firebaseService: FirebaseService,
@@ -36,18 +36,36 @@ export class CommandComponent implements OnInit {
         this.selectmovie = tw;
       });
     });
-    
   }
 
   addComment() {
     this.activateRoute.params.subscribe(routeParam => {
+      if (this.form.value.msg != "") {
+        this.firebaseService.addComment(routeParam.id, this.form.value.msg);
+        console.log(this.form.value.msg);
 
-      this.firebaseService.addComment(routeParam.id, this.form.value.msg);
-      console.log(this.form.value.msg);
+        this.firebaseService.UpdateCom(routeParam.id);
+        console.log(routeParam.id);
+        this.showmodelsuccess();
+      } else {
+        this.showmodelerror();
+      }
+    });
+  }
 
+  showmodelsuccess() {
+    swal.fire({
+      title: "Comment",
+      html: "Comment Complate",
+      icon: "success"
+    });
+  }
 
-      this.firebaseService.UpdateCom(routeParam.id);
-      console.log(routeParam.id)
+  showmodelerror() {
+    swal.fire({
+      title: "Comment",
+      html: "Input your comment",
+      icon: "error"
     });
   }
 }

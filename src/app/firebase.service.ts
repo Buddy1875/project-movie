@@ -76,5 +76,4 @@ export class FirebaseService {
       .update(newTweet);
   }
 
-  
 }
