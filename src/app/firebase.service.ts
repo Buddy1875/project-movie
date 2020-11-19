@@ -22,6 +22,13 @@ export class FirebaseService {
     return DocRef.valueChanges();
   }
 
+  getMoreMovie() {
+    let DocRef = this.firestore.collection<DetailsMovie>("movie", e =>
+      e.orderBy("comment", "desc")
+    );
+    return DocRef.valueChanges();
+  }
+
   SelectMovie(n: string) {
     let DocRef = this.firestore.collection<SelectM>("movie", e =>
       e.where("name", "==", n)
@@ -65,7 +72,7 @@ export class FirebaseService {
   }
 
   UpdateCom(name: string) {
-    console.log("update")
+    console.log("update");
     let newTweet = {
       comment: firebase.default.firestore.FieldValue.increment(1)
     };
@@ -75,5 +82,4 @@ export class FirebaseService {
       .doc(name)
       .update(newTweet);
   }
-
 }

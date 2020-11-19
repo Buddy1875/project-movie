@@ -14,12 +14,17 @@ import { DisplayCommentComponent } from "./display-comment/display-comment.compo
 
 import { FirebaseService } from "./firebase.service";
 import { DisplayMovieComponent } from "./display-movie/display-movie.component";
+import { MoreMovieComponent } from "./more-movie/more-movie.component";
+import { MoreShowComponent } from "./more-show/more-show.component";
+
+
 @NgModule({
   imports: [
     BrowserModule,
     RouterModule.forRoot([
       { path: "movie", component: MovieComponent },
-      { path: "command/:id", component: CommandComponent }
+      { path: "command/:id", component: CommandComponent },
+      { path: "more-movie", component: MoreShowComponent }
     ]),
     FormsModule,
     ReactiveFormsModule,
@@ -32,7 +37,9 @@ import { DisplayMovieComponent } from "./display-movie/display-movie.component";
     MovieComponent,
     CommandComponent,
     DisplayCommentComponent,
-    DisplayMovieComponent
+    DisplayMovieComponent,
+    MoreMovieComponent,
+    MoreShowComponent
   ],
   bootstrap: [AppComponent],
   providers: [FirebaseService]

@@ -51,7 +51,11 @@ input[type="text"]:focus {
 
 
 .imdb{
-  margin: auto;
+  margin: 10px auto;
+  padding: 5px 10px;
   font-size: 30px;
   font-weight: bolder;
+
+  border: 4px solid gold;
+  border-radius: 4px;
 }
