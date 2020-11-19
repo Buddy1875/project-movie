@@ -10,6 +10,7 @@ export class DetailsMovie {
   name: string;
   youtube: string;
   image: string;
+  id:string;
 }
 
 export class SelectM {

@@ -31,7 +31,7 @@ export class FirebaseService {
 
   SelectMovie(n: string) {
     let DocRef = this.firestore.collection<SelectM>("movie", e =>
-      e.where("name", "==", n)
+      e.where("id", "==", n)
     );
 
     return DocRef.valueChanges();
