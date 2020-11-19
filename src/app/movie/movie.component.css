@@ -6,6 +6,22 @@
   text-decoration: underline;
 }
 
-.more{
-  margin: 20px auto;
+.span-top2 {
+  font-size: 40px;
+  font-weight: bold;
+  /* border: 2px solid black; */
+  padding: 20px;
+}
+.span-top2:hover {
+  font-weight: bold;
+  /* border: 2px solid black; */
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 20px;
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
 }

@@ -1,7 +1,8 @@
 <div class="body-movie">
-	<span class="span-top"> Top Movie</span>
+	<div class="title">
+		<span class="span-top"> Top Movie</span> <span class="span-top2" routerLink="more-movie"> More Movie</span>
+	</div>
 	<div *ngFor="let moviedetail of moviedetail">
 		<app-display-movie [moviedetail]="moviedetail"></app-display-movie>
 	</div>
-	<a routerLink="more-movie" class="more"> More </a>
 </div>
