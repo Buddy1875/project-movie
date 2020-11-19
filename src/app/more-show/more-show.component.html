@@ -1,6 +1,8 @@
 <div class="body-movie">
-	<span class="span-top"> More Movie</span>
-	<div *ngFor="let moviedetail of moviedetail" class="mobie-con">
-		<app-more-movie [moviedetail]="moviedetail"></app-more-movie>
+	<div class="flex">
+		<span class="span-top"> More Movie</span>
+		<div *ngFor="let moviedetail of moviedetail" class="mobie-con">
+			<app-more-movie [moviedetail]="moviedetail"></app-more-movie>
+		</div>
 	</div>
 </div>

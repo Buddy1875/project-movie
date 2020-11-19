@@ -6,6 +6,15 @@
   text-decoration: underline;
 }
 
+.flex {
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+  border: 2px solid rgb(255, 0, 0);
+}
+
 .mobie-con {
-  border: 2px solid black;
+  margin: 10px;
+  border: 2px solid rgb(0, 68, 255);
+  max-width: 350px;
 }
