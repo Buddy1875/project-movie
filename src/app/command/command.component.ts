@@ -18,9 +18,12 @@ export class CommandComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.firebaseService
-      .getComment()
-      .subscribe(val => (console.log(val), (this.movie = val)));
+this.activateRoute.params.subscribe(routeParam => {
+      this.firebaseService.SelectComment(routeParam.id).subscribe(tw => {
+        this.movie = tw;
+      });
+    });
+    // Select Movie
     this.activateRoute.params.subscribe(routeParam => {
       this.firebaseService.SelectMovie(routeParam.id).subscribe(tw => {
         this.selectmovie = tw;

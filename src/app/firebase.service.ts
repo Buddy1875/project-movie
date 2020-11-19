@@ -30,4 +30,10 @@ export class FirebaseService {
     return DocRef.valueChanges();
   }
 
+  SelectComment(name: string) {
+    let DocRef = this.firestore.collection<Datamovie>("review", e =>
+      e.where("moviename", "==" ,name)
+    );
+    return DocRef.valueChanges();
+  }
 }
