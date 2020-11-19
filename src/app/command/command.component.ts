@@ -39,6 +39,8 @@ export class CommandComponent implements OnInit {
     this.activateRoute.params.subscribe(routeParam => {
       this.firebaseService.addComment(routeParam.id, this.form.value.msg);
       console.log(this.form.value.msg);
+
+      this.firebaseService.UpdateCom(routeParam.id, this.selectmovie.comment);
     });
   }
 }

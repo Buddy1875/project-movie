@@ -63,4 +63,15 @@ export class FirebaseService {
 
     return ref;
   }
+
+  UpdateCom(name: string, oldcomment: number) {
+    let newTweet = {
+      msg: oldcomment + 1
+    };
+
+    return this.firestore
+      .collection("movie")
+      .doc(name)
+      .update(newTweet);
+  }
 }
