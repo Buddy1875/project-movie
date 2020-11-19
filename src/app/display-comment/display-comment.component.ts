@@ -55,4 +55,39 @@ export class DisplayCommentComponent implements OnInit {
         });
     }
   }
+
+  showmodelsuccess() {
+    swal.fire({
+      title: "Comment",
+      html: "Comment Complate",
+      icon: "success"
+    });
+  }
+
+  showmodelerror() {
+    swal.fire({
+      title: "Comment",
+      html: "Input your comment",
+      icon: "error"
+    });
+  }
+
+  confirem() {
+    swal({
+      title: "Are you sure?",
+      text:
+        "Once deleted, you will not be able to recover this imaginary file!",
+      type: "warning",
+      showConfirmButton: true,
+      showCancelButton: true
+    }).then(willDelete => {
+      if (willDelete.value) {
+        swal("Success");
+      } else {
+        swal("Fail");
+      }
+
+      console.log(willDelete);
+    });
+  }
 }
