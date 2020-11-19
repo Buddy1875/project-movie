@@ -18,4 +18,5 @@ export class SelectM {
   youtube: string;
   image: string;
   comment: number;
+  imdb: number;
 }
