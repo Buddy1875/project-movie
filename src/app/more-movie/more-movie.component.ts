@@ -19,6 +19,6 @@ export class MoreMovieComponent implements OnInit {
   ngOnInit() {}
 
   select() {
-    this.route.navigate([`command/${this.moviedetail.name}`]);
+    this.route.navigate([`command/${this.moviedetail.id}`]);
   }
 }
