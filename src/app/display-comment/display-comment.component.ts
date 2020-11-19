@@ -48,46 +48,67 @@ export class DisplayCommentComponent implements OnInit {
       this.firebaseService
         .deletecomment(this.movie.id)
         .then(() => {
-          alert("Delete Complete");
+          this.showmodelsuccess();
         })
         .catch(err => {
-          alert("Delete Failure");
+          this.showmodelerror();
         });
     }
   }
 
   showmodelsuccess() {
     swal.fire({
-      title: "Comment",
-      html: "Comment Complate",
+      title: "Delete !",
+      html: "Delete Complate",
       icon: "success"
     });
   }
 
   showmodelerror() {
     swal.fire({
-      title: "Comment",
-      html: "Input your comment",
+      title: "Delete !",
+      html: "Delete Cancel",
       icon: "error"
     });
   }
 
-  confirem() {
-    swal({
-      title: "Are you sure?",
-      text:
-        "Once deleted, you will not be able to recover this imaginary file!",
-      type: "warning",
-      showConfirmButton: true,
-      showCancelButton: true
-    }).then(willDelete => {
-      if (willDelete.value) {
-        swal("Success");
-      } else {
-        swal("Fail");
-      }
+  model() {
+    swal
+      .fire({
+        title: "Delete !",
+        html: "Comfire to Dalate",
+        icon: "warning",
+        showConfirmButton: true,
+        showCancelButton: true
+      })
+      .then(willDelete => {
+        if (willDelete.value) {
+          this.firebaseService.deletecomment(this.movie.id);
+          this.showmodelsuccess();
+        } else {
+          this.showmodelerror();
+        }
 
-      console.log(willDelete);
-    });
+        console.log(willDelete);
+      });
   }
+
+  // confirem() {
+  //   swal({
+  //     title: "Are you sure?",
+  //     text:
+  //       "Once deleted, you will not be able to recover this imaginary file!",
+  //     type: "warning",
+  //     showConfirmButton: true,
+  //     showCancelButton: true
+  //   }).then(willDelete => {
+  //     if (willDelete.value) {
+  //       swal("Success");
+  //     } else {
+  //       swal("Fail");
+  //     }
+
+  //     console.log(willDelete);
+  //   });
+  // }
 }
