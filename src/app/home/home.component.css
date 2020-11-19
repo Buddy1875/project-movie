@@ -66,7 +66,7 @@ section {
 
   font-family: "Comic Sans MS", cursive, sans-serif;
 
-  border: 2px solid black;
+  /* border: 2px solid black; */
 }
 .caon-nav {
   display: flex;
