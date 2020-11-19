@@ -40,7 +40,7 @@ export class FirebaseService {
   addComment(name: string, messege: string) {
     let comment = {
       msg: messege,
-      moviename:name,
+      moviename: name,
       date: firebase.default.firestore.Timestamp.now()
     };
     const ref = this.firestore.collection("review").add(comment);
@@ -50,6 +50,17 @@ export class FirebaseService {
       };
       newRef.update(upDateID);
     });
+    let updatecomment = {
+      comment: 5
+    };
+
+    // const updatecom = this.firestore.collection("movie").doc(name);
+    // updatecom.then(newRef => {
+    //   const upDateCom = {
+    //     comment: 5
+    //   };
+    // });
+
     return ref;
   }
 }
