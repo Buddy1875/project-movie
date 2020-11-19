@@ -64,9 +64,9 @@ export class FirebaseService {
     return ref;
   }
 
-  UpdateCom(name: string, oldcomment: number) {
+  UpdateCom(name: string) {
     let newTweet = {
-      msg: oldcomment + 1
+      comment: firebase.default.firestore.FieldValue.increment
     };
 
     return this.firestore

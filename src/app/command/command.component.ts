@@ -12,6 +12,7 @@ import { FormControl, FormGroup } from "@angular/forms";
 export class CommandComponent implements OnInit {
   movie: Datamovie[];
   selectmovie: SelectM[];
+
   form = new FormGroup({
     msg: new FormControl("")
   });
@@ -40,7 +41,7 @@ export class CommandComponent implements OnInit {
       this.firebaseService.addComment(routeParam.id, this.form.value.msg);
       console.log(this.form.value.msg);
 
-      this.firebaseService.UpdateCom(routeParam.id, this.selectmovie.comment);
+      this.firebaseService.UpdateCom(routeParam.id);
     });
   }
 }
