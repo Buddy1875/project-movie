@@ -61,35 +61,35 @@ export class FirebaseService {
     return ref;
   }
 
-  UpdateCom(name: string) {
+  UpdateCom(id: string) {
     console.log("update");
-    let newTweet = {
+    let addcom = {
       comment: firebase.default.firestore.FieldValue.increment(1)
     };
 
     return this.firestore
       .collection("movie")
-      .doc(name)
-      .update(newTweet);
+      .doc(id)
+      .update(addcom);
   }
 
-  UpdateLike(name: string) {
+  UpdateLike(id: string) {
     let likes = {
       like: firebase.default.firestore.FieldValue.increment(1)
     };
 
     return this.firestore.collection("movie")
-    .doc(name)
+    .doc(id)
     .update(likes);
   }
 
-    UpdateDisLike(name: string) {
+    UpdateDisLike(id: string) {
     let likes = {
       dislike: firebase.default.firestore.FieldValue.increment(1)
     };
 
     return this.firestore.collection("movie")
-    .doc(name)
+    .doc(id)
     .update(likes);
   }
 
