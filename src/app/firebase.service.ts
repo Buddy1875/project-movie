@@ -17,7 +17,7 @@ export class FirebaseService {
 
   getMovie() {
     let DocRef = this.firestore.collection<DetailsMovie>("movie", e =>
-      e.orderBy("name", "desc")
+      e.orderBy("comment", "desc").limit(3)
     );
     return DocRef.valueChanges();
   }
