@@ -17,6 +17,8 @@ export class CommandComponent implements OnInit {
     msg: new FormControl("")
   });
 
+  
+
   constructor(
     private firebaseService: FirebaseService,
     private activateRoute: ActivatedRoute
@@ -34,14 +36,18 @@ export class CommandComponent implements OnInit {
         this.selectmovie = tw;
       });
     });
+    
   }
 
   addComment() {
     this.activateRoute.params.subscribe(routeParam => {
+
       this.firebaseService.addComment(routeParam.id, this.form.value.msg);
       console.log(this.form.value.msg);
 
+
       this.firebaseService.UpdateCom(routeParam.id);
+      console.log(routeParam.id)
     });
   }
 }

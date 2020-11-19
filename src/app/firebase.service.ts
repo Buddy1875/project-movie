@@ -65,8 +65,9 @@ export class FirebaseService {
   }
 
   UpdateCom(name: string) {
+    console.log("update")
     let newTweet = {
-      comment: firebase.default.firestore.FieldValue.increment
+      comment: firebase.default.firestore.FieldValue.increment(1)
     };
 
     return this.firestore
@@ -74,4 +75,6 @@ export class FirebaseService {
       .doc(name)
       .update(newTweet);
   }
+
+  
 }
