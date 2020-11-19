@@ -21,13 +21,16 @@
 }
 
 .btn-details {
-  padding: 10px;
-  border: 2px solid black;
-  margin-left: 85%;
+  padding: 10px 25px;
+  border: 2px solid rgb(63, 35, 28);
+  background: none;
+  margin-left: 75%;
   border-radius: 5px;
 }
 
 .btn-details:hover {
   color: white;
-  background: rgba(0, 0, 0, 0.658);
+  background: rgb(63, 35, 28);
+  box-shadow: 1px 1px 10px;
+  cursor: pointer;
 }
