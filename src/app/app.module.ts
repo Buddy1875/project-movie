@@ -22,7 +22,7 @@ import { MoreShowComponent } from "./more-show/more-show.component";
   imports: [
     BrowserModule,
     RouterModule.forRoot([
-      { path: "movie", component: MovieComponent },
+      { path: "", component: MovieComponent },
       { path: "command/:id", component: CommandComponent },
       { path: "more-movie", component: MoreShowComponent }
     ]),
