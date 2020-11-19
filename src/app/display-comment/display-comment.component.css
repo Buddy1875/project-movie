@@ -6,3 +6,15 @@
   border-left: 2px solid rgb(255, 0, 0);
   background: rgba(97, 97, 97, 0.116);
 }
+
+.btn-delete {
+  border: 2px solid rgb(88, 12, 12);
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+.btn-delete:hover {
+  background-color: rgba(56, 17, 17, 0.692);
+  color: white;
+  cursor: pointer;
+}

@@ -17,7 +17,6 @@ import { DisplayMovieComponent } from "./display-movie/display-movie.component";
 import { MoreMovieComponent } from "./more-movie/more-movie.component";
 import { MoreShowComponent } from "./more-show/more-show.component";
 
-
 @NgModule({
   imports: [
     BrowserModule,

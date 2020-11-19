@@ -3,6 +3,8 @@ import { Input } from "@angular/core";
 import { Datamovie } from "../datamovie";
 import { FirebaseService } from "../firebase.service";
 
+import swal from "sweetalert2";
+
 @Component({
   selector: "app-display-comment",
   templateUrl: "./display-comment.component.html",
@@ -28,7 +30,7 @@ export class DisplayCommentComponent implements OnInit {
     const diffSecond = Math.ceil(diff / 1000);
 
     if (diffSecond < 60) {
-      return "Juss now";
+      return "Just now";
     }
 
     if (diffMinute < 60) {
@@ -39,5 +41,18 @@ export class DisplayCommentComponent implements OnInit {
       return `${diffHouse} Hour(s) ago`;
     }
     return `${diffDay} day(s) ago`;
+  }
+
+  del() {
+    if (window.confirm("confirm")) {
+      this.firebaseService
+        .deletecomment(this.movie.id)
+        .then(() => {
+          alert("Delete Complete");
+        })
+        .catch(err => {
+          alert("Delete Failure");
+        });
+    }
   }
 }

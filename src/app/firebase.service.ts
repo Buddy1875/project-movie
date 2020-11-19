@@ -82,4 +82,11 @@ export class FirebaseService {
       .doc(name)
       .update(newTweet);
   }
+
+  deletecomment(id: string) {
+    return this.firestore
+      .collection("review")
+      .doc(id)
+      .delete();
+  }
 }
