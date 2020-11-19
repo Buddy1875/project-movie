@@ -15,7 +15,7 @@ export class DetailsMovie {
 export class SelectM {
   Details: string;
   name: string;
-  youtube: string;
+  youtube: any;
   image: string;
   comment: number;
   imdb: number;
