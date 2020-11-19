@@ -1,8 +1,11 @@
 .movie1 {
   padding: 10px;
+  max-height: 250px;
+  max-width: 250px;
   display: flex;
+  flex-direction: row;
   margin: 20px;
-  /* border: 2px solid black; */
+  border: 2px solid black;
   /* box-shadow: 1px 1px 2px; */
 }
 .movie1 p {
@@ -19,7 +22,7 @@
   font-weight: bold;
 }
 
-.btn-details {
+/* .btn-details {
   padding: 10px;
   border: 2px solid black;
   margin-left: 85%;
@@ -29,4 +32,4 @@
 .btn-details:hover {
   color: white;
   background: rgba(0, 0, 0, 0.658);
-}
+} */
