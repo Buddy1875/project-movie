@@ -11,6 +11,8 @@
 
 .img-movie {
   margin: auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .detail {
@@ -45,4 +47,11 @@ input[type="text"] {
 
 input[type="text"]:focus {
   width: 75%;
+}
+
+
+.imdb{
+  margin: auto;
+  font-size: 30px;
+  font-weight: bolder;
 }

@@ -8,28 +8,28 @@
         width="450"
         height="450"
       />
-      <span>{{ selectmovie.number }}</span>
-    </div>
-			<div class="detail">
-				<h1>{{ selectmovie.name }}</h1>
-				<p>
-					{{ selectmovie.Details }}
-
-				</p>
-			</div>
+			<span class="imdb">IMDB : {{ selectmovie.imdb }}</span>
 		</div>
-		<hr />
-		<div class="comment-body">
-			<span>Comment</span>
-			<div class="debug" *ngFor="let movie of movie">
-				<app-display-comment [movie]="movie"></app-display-comment>
-			</div>
+		<div class="detail">
+			<h1>{{ selectmovie.name }}</h1>
+			<p>
+				{{ selectmovie.Details }}
 
-			<div class="comment-input">
-				<form [formGroup]="form">
-					<input type="text" formControlName="msg" name="msg">
-					<input type="button" class="btn-comment" (click)="addComment()" value="Comment" />
-        </form>
-			</div>
+			</p>
 		</div>
 	</div>
+	<hr />
+	<div class="comment-body">
+		<span>Comment</span>
+		<div class="debug" *ngFor="let movie of movie">
+			<app-display-comment [movie]="movie"></app-display-comment>
+		</div>
+
+		<div class="comment-input">
+			<form [formGroup]="form">
+				<input type="text" formControlName="msg" name="msg">
+				<input type="button" class="btn-comment" (click)="addComment()" value="Comment" />
+        </form>
+		</div>
+	</div>
+</div>
