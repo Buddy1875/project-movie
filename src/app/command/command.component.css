@@ -4,7 +4,7 @@
   /* border: 2px solid black; */
 }
 
-img{
+img {
   border-radius: 10px;
   box-shadow: 1px 1px 10px;
 }
@@ -33,7 +33,7 @@ img{
   /* border: 2px solid red; */
 }
 
-.form-class{
+.form-class {
   display: flex;
   justify-content: space-between;
 }
@@ -54,10 +54,9 @@ input[type="text"] {
   padding: 10px 20px;
   border-radius: 2px;
   width: 85%;
-  border: none; 
+  border: none;
   border-bottom: 5px solid #7d4e08;
 }
-
 
 .imdb {
   margin: 0 auto;
@@ -68,4 +67,41 @@ input[type="text"] {
   border: 4px solid gold;
   background: gold;
   border-radius: 4px;
+}
+
+.like {
+  margin: 0 auto;
+  margin-top: 15px;
+  padding: 5px 25px;
+  font-size: 30px;
+  font-weight: bolder;
+  border: 2px solid rgb(66, 155, 73);
+  border-radius: 4px;
+}
+
+.like:hover {
+  background: rgb(66, 155, 73);
+  box-shadow: 1px 1px 5px;
+  color: white;
+  cursor: pointer;
+}
+
+.dislike {
+  margin: 0 19px;
+  margin-top: 15px;
+  padding: 5px 10px;
+  font-size: 30px;
+  font-weight: bolder;
+  border: 2px solid rgb(255, 115, 0);
+  border-radius: 4px;
+}
+
+.dislike:hover {
+  background: rgb(255, 115, 0);
+  box-shadow: 1px 1px 5px;
+  color: white;
+  cursor: pointer;
+}
+.from-like {
+  margin: 10px auto;
 }

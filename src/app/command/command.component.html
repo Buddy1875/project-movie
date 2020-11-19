@@ -9,6 +9,10 @@
         height="450"
       />
 			<span class="imdb">IMDb : {{ selectmovie.imdb }}</span>
+			<div class="from-like">
+				<span class="like" (click)="updatelikes()" >Like: {{ selectmovie.like }}</span>
+				<span class="dislike" (click)="updatedislikes()"> Dislike: {{ selectmovie.dislike }}</span>
+			</div>
 		</div>
 		<div class="detail">
 			<h1>{{ selectmovie.name }}</h1>

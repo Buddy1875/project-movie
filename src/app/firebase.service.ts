@@ -57,16 +57,6 @@ export class FirebaseService {
       };
       newRef.update(upDateID);
     });
-    let updatecomment = {
-      comment: 5
-    };
-
-    // const updatecom = this.firestore.collection("movie").doc(name);
-    // updatecom.then(newRef => {
-    //   const upDateCom = {
-    //     comment: 5
-    //   };
-    // });
 
     return ref;
   }
@@ -81,6 +71,26 @@ export class FirebaseService {
       .collection("movie")
       .doc(name)
       .update(newTweet);
+  }
+
+  UpdateLike(name: string) {
+    let likes = {
+      like: firebase.default.firestore.FieldValue.increment(1)
+    };
+
+    return this.firestore.collection("movie")
+    .doc(name)
+    .update(likes);
+  }
+
+    UpdateDisLike(name: string) {
+    let likes = {
+      dislike: firebase.default.firestore.FieldValue.increment(1)
+    };
+
+    return this.firestore.collection("movie")
+    .doc(name)
+    .update(likes);
   }
 
   deletecomment(id: string) {

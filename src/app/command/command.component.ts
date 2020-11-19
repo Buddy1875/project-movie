@@ -46,25 +46,41 @@ export class CommandComponent implements OnInit {
 
         this.firebaseService.UpdateCom(routeParam.id);
         console.log(routeParam.id);
-        this.showmodelsuccess();
+        this.showmodelsuccess("Comment Complete");
       } else {
-        this.showmodelerror();
+        this.showmodelerror("Comment Fails");
       }
     });
   }
 
-  showmodelsuccess() {
+  updatelikes() {
+    this.activateRoute.params.subscribe(routeParam => {
+      this.firebaseService.UpdateLike(routeParam.id);
+      console.log(routeParam.id);
+      this.showmodelsuccess("Like !");
+    });
+  }
+
+    updatedislikes() {
+    this.activateRoute.params.subscribe(routeParam => {
+      this.firebaseService.UpdateDisLike(routeParam.id);
+      console.log(routeParam.id);
+      this.showmodelsuccess("Dislike !");
+    });
+  }
+
+  showmodelsuccess(msg: string) {
     swal.fire({
-      title: "Comment",
-      html: "Comment Complate",
+      title: "Success",
+      html: msg,
       icon: "success"
     });
   }
 
-  showmodelerror() {
+  showmodelerror(msg: string) {
     swal.fire({
-      title: "Comment",
-      html: "Input your comment",
+      title: "Error",
+      html: msg,
       icon: "error"
     });
   }

@@ -19,4 +19,6 @@ export class SelectM {
   image: string;
   comment: number;
   imdb: number;
+  like: number;
+  dislike:number;
 }
