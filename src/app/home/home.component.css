@@ -10,7 +10,11 @@ nav {
   width: 100%;
   color: rgb(0, 0, 0);
   font-family: "Comic Sans MS", cursive, sans-serif;
-  border-bottom: 2px solid rgb(149, 233, 14);
+  border-bottom: 2px solid rgb(0, 0, 0);
+}
+
+.home {
+  margin-right: 50px;
 }
 
 nav div a {
