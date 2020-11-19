@@ -92,23 +92,4 @@ export class DisplayCommentComponent implements OnInit {
         console.log(willDelete);
       });
   }
-
-  // confirem() {
-  //   swal({
-  //     title: "Are you sure?",
-  //     text:
-  //       "Once deleted, you will not be able to recover this imaginary file!",
-  //     type: "warning",
-  //     showConfirmButton: true,
-  //     showCancelButton: true
-  //   }).then(willDelete => {
-  //     if (willDelete.value) {
-  //       swal("Success");
-  //     } else {
-  //       swal("Fail");
-  //     }
-
-  //     console.log(willDelete);
-  //   });
-  // }
 }
