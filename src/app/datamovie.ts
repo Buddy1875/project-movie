@@ -2,7 +2,7 @@ export class Datamovie {
   id: string;
   moviename: string;
   msg: string;
-  date: string;
+  date: any;
 }
 
 export class DetailsMovie {

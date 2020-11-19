@@ -32,8 +32,24 @@ export class FirebaseService {
 
   SelectComment(name: string) {
     let DocRef = this.firestore.collection<Datamovie>("review", e =>
-      e.where("moviename", "==" ,name)
+      e.where("moviename", "==", name)
     );
     return DocRef.valueChanges();
+  }
+
+  addComment(name: string, messege: string) {
+    let comment = {
+      msg: messege,
+      moviename:name,
+      date: firebase.default.firestore.Timestamp.now()
+    };
+    const ref = this.firestore.collection("review").add(comment);
+    ref.then(newRef => {
+      const upDateID = {
+        id: newRef.id
+      };
+      newRef.update(upDateID);
+    });
+    return ref;
   }
 }

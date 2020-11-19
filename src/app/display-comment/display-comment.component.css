@@ -1,4 +1,6 @@
 .comment-list {
+  display: flex;
+  justify-content: space-between;
   margin: 15px;
   padding: 10px;
   border-left: 2px solid rgb(255, 0, 0);
