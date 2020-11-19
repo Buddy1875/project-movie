@@ -1,5 +1,6 @@
-<div class="movie1" id="movieid">
+<div class="movie1" id="movieid" (click)="select()">
 	<img src="{{ moviedetail.image }}" class="img" alt="Girl in a jacket" width="250" height="250">
+	<span class="name">{{ moviedetail.name }}</span>
 
 	<!-- <div style="">
 		<span class="name">NameMovie | {{ moviedetail.name }}</span>
@@ -8,5 +9,4 @@
 		</p>
 		<input class="btn-details" type="button" (click)="select()" value="Details">
 	</div> -->
-	</div>
-  
+</div>
