@@ -10,7 +10,7 @@ export class FirebaseService {
 
   getComment() {
     let DocRef = this.firestore.collection<Datamovie>("review", e =>
-      e.orderBy("date", "desc")
+      e.orderBy("date", "asc")
     );
     return DocRef.valueChanges();
   }
