@@ -15,7 +15,11 @@ nav {
 }
 
 .home {
+  margin : 20px;
+}
+.more{
   margin-right: 50px;
+  margin-left: 20px;
 }
 
 nav div a {
