@@ -34,7 +34,7 @@ export class DisplayCommentComponent implements OnInit {
     }
 
     if (diffMinute < 60) {
-      return `${diffMinute} mintue(s) ago`;
+      return `${diffMinute} minute(s) ago`;
     }
 
     if (diffHouse < 24) {
